@@ -1,0 +1,24 @@
+{
+	"name": "Sink_Athletes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage_TokyoOlympics",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "athletes.csv",
+				"folderPath": "raw-data",
+				"fileSystem": "tokyo-olympics-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
